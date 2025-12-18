@@ -1,0 +1,9 @@
+<li class="flex items-center justify-between p-2 border rounded">
+  <span [class.line-through]="completed" [class.text-gray-400]="completed">
+    {{ text }}
+  </span>
+
+  <button (click)="onToggle()" class="text-sm px-3 py-1 rounded bg-green-600 text-white font-semibold">
+    {{ completed ? 'Undo' : 'Done' }}
+  </button>
+</li>

@@ -30,30 +30,38 @@ ng generate --help
 
 To build the project run:
 
-```bash
-ng build
-```
+# MySuperTasks — Todo List di prova
 
-This will compile your project and store the build artifacts in the `dist/` directory. By default, the production build optimizes your application for performance and speed.
+Questo repository contiene un piccolo progetto di prova creato per sperimentare l'uso di Angular nella realizzazione di una semplice Todo List.
 
-## Running unit tests
+Descrizione:
+- Progetto didattico/test: imparare la struttura di un'app Angular.
+- Funzionalità: lista di attività (aggiungi, rimuovi, marcare come completata).
 
-To execute unit tests with the [Vitest](https://vitest.dev/) test runner, use the following command:
+Avvio rapido (sviluppo):
 
-```bash
-ng test
-```
-
-## Running end-to-end tests
-
-For end-to-end (e2e) testing, run:
+1. Installa le dipendenze:
 
 ```bash
-ng e2e
+npm install
 ```
 
-Angular CLI does not come with an end-to-end testing framework by default. You can choose one that suits your needs.
+2. Avvia il server di sviluppo:
 
-## Additional Resources
+```bash
+npm start
+# oppure
+ng serve
+```
 
-For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+Apri il browser su http://localhost:4200/ per vedere l'app.
+
+Struttura principale del progetto:
+- `src/app/todo/` — componente Todo principale.
+- `src/app/todo-item/` — componente per singolo elemento Todo.
+
+Scopo e note:
+- Questo progetto è pensato per prove e apprendimento; non è destinato alla produzione.
+- Puoi usare Angular CLI per generare nuovi componenti o modificare quelli esistenti.
+
+Se vuoi, posso avviare l'app localmente, aggiungere istruzioni di test o creare un semplice commit con questo README aggiornato.

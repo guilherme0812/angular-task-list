@@ -1,0 +1,50 @@
+<div class="min-h-screen bg-gray-100 flex items-center justify-center">
+  <div class="bg-white p-6 rounded-xl shadow-lg w-full max-w-md">
+    <h1 class="text-2xl font-bold mb-4 text-center">My Super Task List</h1>
+
+    <!-- Todo List -->
+    <ul class="space-y-2 mb-4 flex flex-col gap-2">
+      <!-- <li
+        *ngFor="let todo of todos; let i = index"
+        class="flex items-center justify-between p-2 border rounded"
+      >
+        <span
+          [class.line-through]="todo.completed"
+          [class.text-gray-400]="todo.completed"
+        >
+          {{ todo.text }}
+        </span>
+
+        <button
+          (click)="toggleTodo(i)"
+          class="text-sm px-3 py-1 rounded bg-green-500 text-white hover:bg-green-600"
+        >
+          {{ todo.completed ? 'Undo' : 'Done' }}
+        </button>
+      </li> -->
+      <app-todo-item
+        *ngFor="let todo of todos; let i = index"
+        [text]="todo.text"
+        [completed]="todo.completed"
+        (toggle)="todo.completed = !todo.completed"
+      ></app-todo-item>
+    </ul>
+
+    <!-- Add New Todo -->
+    <div class="flex gap-2">
+      <input
+        type="text"
+        [(ngModel)]="newTodoText"
+        placeholder="Add a new task"
+        class="flex-1 border rounded px-3 py-2"
+      />
+
+      <button
+        (click)="addTodo()"
+        class="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600"
+      >
+        Add
+      </button>
+    </div>
+  </div>
+</div>
